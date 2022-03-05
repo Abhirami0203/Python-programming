@@ -1,14 +1,10 @@
-def fib(n):
-    if (n<=1):
-        return n
-    else:
-        return (fib(n-1)+fib(n-2))
+def recur_fibo(n):
+   if n <= 1:
+       return n
+   else:
+       return(recur_fibo(n-1) + recur_fibo(n-2))
 
-n=int(input("\nEnter the limit : "))
-
-if(n<=0):
-    print("\nenter positive number")
-else:
-    print("\nFibnoacci series : ")
-    for i in range(n):
-        print(fib(i))
+n=int(input("Enter the number:"))
+recur_fibo(n)
+for i in range(n):
+    print(recur_fibo(i))
